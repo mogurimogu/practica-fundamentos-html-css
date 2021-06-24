@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600;700&display=swap');
+
 html {
     box-sizing: border-box;
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
 }
 
 *,
@@ -80,24 +83,6 @@ a.btn {
     padding: 10px;
 }
 
-#formulario-registro {
-    border-radius: 15px;
-    padding: 20px;
-    margin: 10px;
-    background-color: #383d64bd;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-
-}
-
-#formulario-registro input {
-    border-radius: 10px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: none;
-    font-size: 1em;
-}
-
-#formulario-registro input[type="submit"] {
-    cursor: pointer;
+.bold{
+    font-weight: 600;
 }

@@ -20,3 +20,33 @@ body#index::before {
     align-items: center;
     height: 100%;
 }
+
+
+#formulario-registro {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #383d64bd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+
+}
+
+#formulario-registro input {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+    transition: all 0.1s ease;
+}
+
+#formulario-registro input:focus {
+    outline: 2px solid #F09711;
+    box-shadow: #F09711;
+}
+
+#formulario-registro input[type="submit"] {
+    cursor: pointer;
+    margin: 0;
+}
