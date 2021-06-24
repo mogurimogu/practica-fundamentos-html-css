@@ -1,0 +1,103 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #383D64;
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bgc-1 {
+    background-color: #383D64;
+}
+
+.bgc-2 {
+    background-color: #484F85;
+}
+
+.bgc-3 {
+    background-color: #32B6B6;
+}
+
+.bgc-4 {
+    background-color: #FFD08A;
+}
+
+.bgc-5 {
+    background-color: #F09711;
+}
+
+.text-black {
+    color: black;
+}
+
+.text-white {
+    color: white
+}
+
+.w100 {
+    width: 100%;
+}
+
+.text-center {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    opacity: 1;
+}
+
+a.btn {
+    padding: 10px;
+    display: inline-block;
+}
+
+.logo {
+    max-width: 300px;
+    padding: 10px;
+}
+
+#formulario-registro {
+    border-radius: 15px;
+    padding: 20px;
+    margin: 10px;
+    background-color: #383d64bd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+
+}
+
+#formulario-registro input {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 1em;
+}
+
+#formulario-registro input[type="submit"] {
+    cursor: pointer;
+}
