@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
 
 html {
     box-sizing: border-box;
@@ -85,4 +87,87 @@ a.btn {
 
 .bold{
     font-weight: 600;
+}
+
+
+/*boton de me gusta*/
+input.like[type="checkbox"]{
+    -moz-appearance:initial;
+    margin: 0;
+    opacity: 1;
+    height: 0;
+    width: 0;
+}
+
+input.like[type="checkbox"]::after{
+    font-family: "Material Icons";
+    content: "\e87e";
+    display: inline-block;
+    color: white;
+    font-size: 2em;
+}
+
+input.like[type="checkbox"]:checked::after{
+    content: "\e87d";
+}
+
+
+/*Header Carousel*/
+header{
+    display:block;
+    overflow:hidden;  
+    width: 100%;
+    height: 580px;
+}
+.carousel{
+    display:block;
+    width: 100%;
+    height: 600px;
+    background: #32B6B6;
+    overflow-x: scroll;
+    margin: 0;
+    white-space: nowrap; 
+}
+
+.carousel article{
+    display: inline-block;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    padding: 2rem;
+}
+
+article .info{
+    z-index: 1px;
+}
+
+.carousel article h1{
+    margin: 0 0 1em 0;
+}
+
+.carousel article *{
+    white-space: normal;
+}
+
+.carousel article .arrows{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    background-color: red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 0;
+}
+.carousel article .arrows a{
+    color: white;
+}
+.carousel article .arrows a span{
+    font-size: 2em;
+}
+
+.carousel #slide-1{
+    background-color: #F09711;
 }
