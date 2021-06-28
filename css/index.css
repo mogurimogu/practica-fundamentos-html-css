@@ -11,7 +11,8 @@ body#index::before {
     left: 0;
     right: 0;
     opacity: 0.2;
-    z-index: -1
+    z-index: -1;
+    backdrop-filter: grayscale(100%);
 }
 
 #registro {
@@ -30,6 +31,13 @@ body#index::before {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     max-width: 400px;
 
+}
+
+#formulario-registro a{
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #FFD08A;
 }
 
 #formulario-registro input {
