@@ -19,7 +19,7 @@ body {
     background-color: #383D64;
     margin: 0;
     height: 100vh;
-    width: 100vw;
+    overflow: auto;
 }
 
 .bgc-1 {
@@ -85,22 +85,24 @@ a.btn {
     padding: 10px;
 }
 
-.bold{
+.bold {
     font-weight: 600;
 }
 
 
 /*boton de me gusta*/
-input.like[type="checkbox"]{
-    -moz-appearance:initial;
+input.like[type="checkbox"] {
+    -moz-appearance: initial;
+    -webkit-appearance: none;
+    background-color: none;
+    border: none;
     margin: 0;
     opacity: 1;
-    height: 0;
-    width: 0;
     cursor: pointer;
+    text-align: center;
 }
 
-input.like[type="checkbox"]::after{
+input.like[type="checkbox"]::before {
     font-family: "Material Icons";
     content: "\e87e";
     display: inline-block;
@@ -108,35 +110,31 @@ input.like[type="checkbox"]::after{
     font-size: 2em;
 }
 
-input.like[type="checkbox"]:checked::after{
+input.like[type="checkbox"]:checked::before {
     content: "\e87d";
 }
 
 
 /*Header Carousel*/
-.carousel{
+.carousel {
     height: 600px;
     background: #32B6B6;
     overflow: hidden;
     margin: 0;
 }
 
-.carousel article{
+.carousel article {
     position: relative;
-    padding: 2em;
     height: 100%;
     color: white;
+    padding: 2rem;
 }
 
-.carousel article h1{
-    margin: 0 0 1em 0;
+.carousel article h1 {
+    margin: 0 0 1rem 0;
 }
 
-.carousel article *{
-    white-space: normal;
-}
-
-.carousel article .arrows{
+.carousel article .arrows {
     position: absolute;
     left: 0;
     right: 0;
@@ -148,34 +146,71 @@ input.like[type="checkbox"]:checked::after{
     align-items: center;
     z-index: 0;
 }
-.carousel article a{
+
+.carousel article .arrows a{
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 20px;
+
+}
+
+.carousel article a {
     color: white;
 }
-.carousel article .arrows a span{
+
+.carousel article .arrows a span {
     font-size: 2em;
 }
 
-.carousel #slide-1{
-    background-color: #F09711;
+
+.carousel article .info {
+    max-width: 500px;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    margin: 0;
+    backdrop-filter: blur(2px);
+
+}
+
+.carousel article .titulo-peli {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.carousel article .metadatos {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.carousel article .fecha {
+    font-weight: 400;
+}
+
+.carousel article .puntuacion {
+    font-size: 1.3em;
+}
+
+.carousel #slide-1 {
     background-image: url('https://www.themoviedb.org/t/p/original/sPeqIdCYvcmeZe5fCu7JgMnf1HL.jpg');
     background-position: center right;
     background-size: cover;
 }
 
-.carousel article .info{
-    max-width: 500px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 15px;
-    margin: 0;
-    padding: 2em;
-
-
+.carousel #slide-2 {
+    background-image: url('https://www.themoviedb.org/t/p/original/kHVQcmPXSDzOwcJAnbOR2z6Ck2f.jpg');
+    background-position: center right;
+    background-size: cover;
 }
 
-.carousel article .titulo-peli{
-    display: flex;
-}
-
-.carousel article .titulo-peli .like{
-    width: 20px;
+.carousel #slide-3 {
+    background-image: url('https://www.themoviedb.org/t/p/original/dkbYiwCWukwt1HlXDcpImL3xWUv.jpg');
+    background-position: center left;
+    background-size: cover;
 }

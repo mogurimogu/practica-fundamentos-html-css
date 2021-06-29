@@ -1,3 +1,4 @@
 # Práctica fundamentos web - html y css
 
-![svg](assets/img/logo.svg)
+![svg](assets/img/logo-negro.svg)
+
