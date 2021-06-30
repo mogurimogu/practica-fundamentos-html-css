@@ -18,7 +18,7 @@ html {
 body {
     background-color: #383D64;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     overflow: auto;
 }
 
@@ -224,6 +224,7 @@ input.like[type="checkbox"]:checked::before {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.7);
     padding: 0 10px;
+    user-select: none;
 }
 
 #navbar .logo{
@@ -280,12 +281,7 @@ input.like[type="checkbox"]:checked::before {
     font-size: 1em;
 }
 
-/*Barra busqueda*/
-#navbar {
-    flex: 1;
-    user-select: none;
-    position: inherit;
-}
+/*Menú navegación*/
 
 #navbar nav .material-icons-outlined{
     color: white;
@@ -330,6 +326,7 @@ input.like[type="checkbox"]:checked::before {
     margin: 0;
     color: white;
     backdrop-filter: blur(2px);
+    z-index: 9999;
 }
 
 #navbar nav #nav-menu-bars:checked ~ .nav-menu li{
