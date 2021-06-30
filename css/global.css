@@ -214,3 +214,163 @@ input.like[type="checkbox"]:checked::before {
     background-position: center left;
     background-size: cover;
 }
+
+/*Navbar*/
+
+#navbar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 10px;
+}
+
+#navbar .logo{
+    display: inline-block;
+    background-image: url(../assets/img/logo-iso.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 0;
+    margin: 0 10px;
+}
+
+#navbar .logo a{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+/*Barra busqueda*/
+#searchbar{
+    flex: 1;
+}
+#searchbar form{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 0;
+    margin: 10px;
+}
+
+#searchbar form #search{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    opacity: 0.8;
+    
+}
+
+#searchbar form .search-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-left: 1px solid #eaeaea;
+}
+
+#searchbar form .search-btn span.material-icons-outlined{
+    font-size: 1em;
+}
+
+/*Barra busqueda*/
+#navbar {
+    flex: 1;
+    user-select: none;
+    position: inherit;
+}
+
+#navbar nav .material-icons-outlined{
+    color: white;
+    padding: 10px;
+}
+#navbar nav .nav-menu{
+    display: none;
+}
+#navbar nav .nav-menu ul{
+    list-style: none;
+    padding: 0;
+}
+#navbar nav .nav-menu li{
+    display: inline-block;
+}
+
+#navbar nav .nav-menu li a{
+    color: white;
+    opacity: 0.7;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#navbar nav .nav-menu li a:hover{
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+#navbar nav #nav-menu-bars{
+    display: none;
+}
+#navbar nav #nav-menu-bars:checked ~ .nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(11, 12, 29, 0.9);
+    margin: 0;
+    color: white;
+    backdrop-filter: blur(2px);
+}
+
+#navbar nav #nav-menu-bars:checked ~ .nav-menu li{
+    display: block;
+    margin: 20px 0;
+    font-size: 2em;
+    letter-spacing: 0.25em;
+}
+
+#navbar nav #nav-menu-bars:checked ~ .nav-menu a{
+    display: block;
+}
+#navbar nav #nav-menu-bars:checked ~ .nav-menu label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+
+
+@media (min-width: 920px) {
+    #navbar .logo{
+        background-image: url(../assets/img/logo.svg);
+    }
+    #navbar .logo a{
+        display: inline-block;
+        height: 30px;
+        width: 180px;
+    }    
+    
+}
+@media (min-width: 720px) {    
+
+    #navbar nav .nav-menu{
+        display: inline-block;
+    }
+    #navbar nav .nav-menu label{
+        display: none;
+    }
+    #navbar nav .material-icons-outlined{
+        display: none;
+    }
+    
+}
