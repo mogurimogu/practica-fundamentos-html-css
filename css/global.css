@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons+Outlined');
 
+
+:root {
+    --color1: #383D64;
+    --color2: #484F85;
+    --color3: #32B6B6;
+    --color4: #FFD08A;
+    --color5: #F09711;
+}
+
+
 html {
     box-sizing: border-box;
     font-size: 16px;
@@ -16,30 +26,30 @@ html {
 }
 
 body {
-    background-color: #383D64;
+    background-color: var(--color1);
     margin: 0;
     min-height: 100vh;
     overflow: auto;
 }
 
 .bgc-1 {
-    background-color: #383D64;
+    background-color: var(--color1);
 }
 
 .bgc-2 {
-    background-color: #484F85;
+    background-color: var(--color2);
 }
 
 .bgc-3 {
-    background-color: #32B6B6;
+    background-color: var(--color3);
 }
 
 .bgc-4 {
-    background-color: #FFD08A;
+    background-color: var(--color4);
 }
 
 .bgc-5 {
-    background-color: #F09711;
+    background-color: var(--color5);
 }
 
 .text-black {
@@ -116,25 +126,25 @@ input.like[type="checkbox"]:checked::before {
 
 
 /*Header Carousel*/
-.carousel {
+header .carousel {
     height: 600px;
-    background: #32B6B6;
+    background: var(--color3);
     overflow: hidden;
     margin: 0;
 }
 
-.carousel article {
+header .carousel article {
     position: relative;
     height: 100%;
     color: white;
     padding: 2rem;
 }
 
-.carousel article h1 {
+header .carousel article h1 {
     margin: 0 0 1rem 0;
 }
 
-.carousel article .arrows {
+header .carousel article .arrows {
     position: absolute;
     left: 0;
     right: 0;
@@ -147,7 +157,7 @@ input.like[type="checkbox"]:checked::before {
     z-index: 0;
 }
 
-.carousel article .arrows a{
+header .carousel article .arrows a {
     background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
@@ -157,16 +167,16 @@ input.like[type="checkbox"]:checked::before {
 
 }
 
-.carousel article a {
+header .carousel article a {
     color: white;
 }
 
-.carousel article .arrows a span {
+header .carousel article .arrows a span {
     font-size: 2em;
 }
 
 
-.carousel article .info {
+header .carousel article .info {
     max-width: 500px;
     padding: 2rem;
     background-color: rgba(0, 0, 0, 0.7);
@@ -176,40 +186,40 @@ input.like[type="checkbox"]:checked::before {
 
 }
 
-.carousel article .titulo-peli {
+header .carousel article .titulo-peli {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
 }
 
-.carousel article .metadatos {
+header .carousel article .metadatos {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
 }
 
-.carousel article .fecha {
+header .carousel article .fecha {
     font-weight: 400;
 }
 
-.carousel article .puntuacion {
+header .carousel article .puntuacion {
     font-size: 1.3em;
 }
 
-.carousel #slide-1 {
+header .carousel #slide-1 {
     background-image: url('https://www.themoviedb.org/t/p/original/sPeqIdCYvcmeZe5fCu7JgMnf1HL.jpg');
     background-position: center right;
     background-size: cover;
 }
 
-.carousel #slide-2 {
+header .carousel #slide-2 {
     background-image: url('https://www.themoviedb.org/t/p/original/kHVQcmPXSDzOwcJAnbOR2z6Ck2f.jpg');
     background-position: center right;
     background-size: cover;
 }
 
-.carousel #slide-3 {
+header .carousel #slide-3 {
     background-image: url('https://www.themoviedb.org/t/p/original/dkbYiwCWukwt1HlXDcpImL3xWUv.jpg');
     background-position: center left;
     background-size: cover;
@@ -217,7 +227,7 @@ input.like[type="checkbox"]:checked::before {
 
 /*Navbar*/
 
-#navbar{
+#navbar {
     position: sticky;
     top: 0;
     display: flex;
@@ -227,7 +237,7 @@ input.like[type="checkbox"]:checked::before {
     user-select: none;
 }
 
-#navbar .logo{
+#navbar .logo {
     display: inline-block;
     background-image: url(../assets/img/logo-iso.svg);
     background-repeat: no-repeat;
@@ -236,17 +246,18 @@ input.like[type="checkbox"]:checked::before {
     margin: 0 10px;
 }
 
-#navbar .logo a{
+#navbar .logo a {
     display: inline-block;
     height: 30px;
     width: 30px;
 }
 
 /*Barra busqueda*/
-#searchbar{
+#searchbar {
     flex: 1;
 }
-#searchbar form{
+
+#searchbar form {
     background-color: white;
     padding: 10px;
     display: flex;
@@ -256,7 +267,7 @@ input.like[type="checkbox"]:checked::before {
     margin: 10px;
 }
 
-#searchbar form #search{
+#searchbar form #search {
     display: inline-block;
     height: 100%;
     width: 100%;
@@ -266,10 +277,10 @@ input.like[type="checkbox"]:checked::before {
     border-radius: 5px;
     outline: none;
     opacity: 0.8;
-    
+
 }
 
-#searchbar form .search-btn{
+#searchbar form .search-btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -277,51 +288,59 @@ input.like[type="checkbox"]:checked::before {
     border-left: 1px solid #eaeaea;
 }
 
-#searchbar form .search-btn span.material-icons-outlined{
+#searchbar form .search-btn span.material-icons-outlined {
     font-size: 1em;
 }
 
 /*Menú navegación*/
+#navbar{
+    min-height: 60px;
+}
 
-#navbar nav .material-icons-outlined{
+#navbar nav .material-icons-outlined {
     color: white;
     padding: 10px;
 }
 
-#navbar nav .nav-menu{
+#navbar nav .nav-menu {
     display: none;
 }
-#navbar nav .nav-menu ul{
+
+#navbar nav .nav-menu ul {
     list-style: none;
     padding: 0;
 }
-#navbar nav .nav-menu li{
+
+#navbar nav .nav-menu li {
     display: inline-block;
 }
 
-#navbar nav .nav-menu li a{
+#navbar nav .nav-menu li a {
     color: white;
     opacity: 0.7;
     padding: 10px;
     border-radius: 5px;
     transition: 0.2s;
 }
-#navbar nav .nav-menu li a:hover{
-    opacity: 1;
-}
-#navbar nav .nav-menu li a:focus{
+
+#navbar nav .nav-menu li a:hover {
     opacity: 1;
 }
 
-#navbar nav .nav-menu li a:hover{
+#navbar nav .nav-menu li a:focus {
+    opacity: 1;
+}
+
+#navbar nav .nav-menu li a:hover {
     background: rgba(0, 0, 0, 0.7);
 }
 
 
-#navbar nav #nav-menu-bars{
+#navbar nav #nav-menu-bars {
     display: none;
 }
-#navbar nav #nav-menu-bars:checked ~ .nav-menu{
+
+#navbar nav #nav-menu-bars:checked~.nav-menu {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -337,17 +356,18 @@ input.like[type="checkbox"]:checked::before {
     z-index: 9999;
 }
 
-#navbar nav #nav-menu-bars:checked ~ .nav-menu li{
+#navbar nav #nav-menu-bars:checked~.nav-menu li {
     display: block;
     margin: 20px 0;
     font-size: 2em;
     letter-spacing: 0.25em;
 }
 
-#navbar nav #nav-menu-bars:checked ~ .nav-menu a{
+#navbar nav #nav-menu-bars:checked~.nav-menu a {
     display: block;
 }
-#navbar nav #nav-menu-bars:checked ~ .nav-menu label{
+
+#navbar nav #nav-menu-bars:checked~.nav-menu label {
     position: absolute;
     top: 0;
     right: 0;
@@ -356,49 +376,138 @@ input.like[type="checkbox"]:checked::before {
 
 
 @media (min-width: 920px) {
-    #navbar .logo{
+    #navbar .logo {
         background-image: url(../assets/img/logo.svg);
     }
-    #navbar .logo a{
+
+    #navbar .logo a {
         display: inline-block;
         height: 30px;
         width: 180px;
-    }    
-    
-}
-@media (min-width: 720px) {    
+    }
 
-    #navbar nav .nav-menu{
+}
+
+@media (min-width: 720px) {
+
+    #navbar nav .nav-menu {
         display: inline-block;
     }
 
-    #navbar nav .nav-menu ul{
+    #navbar nav .nav-menu ul {
         margin: 0;
         display: flex;
         align-items: center;
     }
 
-    #navbar nav .cerrar-sesion .text{
+    #navbar nav .cerrar-sesion .text {
         display: none;
-    }    
+    }
 
-    #navbar nav .nav-menu label{
+    #navbar nav .nav-menu label {
         display: none;
     }
-    #navbar nav .material-icons-outlined{
+
+    #navbar nav .material-icons-outlined {
         display: none;
     }
-    #navbar nav .cerrar-sesion{
+
+    #navbar nav .cerrar-sesion {
         display: flex;
         align-items: center;
         justify-content: center;
     }
-    
-    #navbar nav .cerrar-sesion .material-icons-outlined{
-    display: inline;
-    font-size: 1em;
-    padding: 0;
+
+    #navbar nav .cerrar-sesion .material-icons-outlined {
+        display: inline;
+        font-size: 1em;
+        padding: 0;
+    }
 }
 
-    
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/*Catálogo*/
+main h1.titulo{
+    color: white;
+}
+#pelis, #series, #novedades, #favoritos{
+    display: flex;
+    padding: 0 10px;
+    flex-flow: column;
+}
+
+#pelis > .carousel, #series > .carousel, #novedades > .carousel, #favoritos > .carousel{
+    display: flex;
+    flex-flow: row;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.ficha{
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    margin-right: 1rem;
+    max-width: 500px;
+}
+
+.ficha > a{
+    display: inherit;
+}
+
+.ficha:hover .informacion{
+    width: 300px;
+    height: auto;
+    padding: 1rem;
+    transition: ease width 0.5s;
+}
+
+.ficha header.encabezado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ficha header.encabezado a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color3);
+}
+
+.ficha header.encabezado input.like[type="checkbox"]::before{
+    color: rgb(206, 42, 78);
+}
+
+.ficha .caratula{
+    max-height: 250px;
+    border-radius: 5px;
+}
+
+.ficha .informacion{
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    max-height: 250px;
+    transition: ease width 0.5s;
+}
+
+.ficha .metadatos{
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer*/
+
+footer#footer{
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    color: white;
+    text-align: center;
 }
