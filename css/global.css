@@ -287,6 +287,7 @@ input.like[type="checkbox"]:checked::before {
     color: white;
     padding: 10px;
 }
+
 #navbar nav .nav-menu{
     display: none;
 }
@@ -303,6 +304,13 @@ input.like[type="checkbox"]:checked::before {
     opacity: 0.7;
     padding: 10px;
     border-radius: 5px;
+    transition: 0.2s;
+}
+#navbar nav .nav-menu li a:hover{
+    opacity: 1;
+}
+#navbar nav .nav-menu li a:focus{
+    opacity: 1;
 }
 
 #navbar nav .nav-menu li a:hover{
@@ -363,11 +371,34 @@ input.like[type="checkbox"]:checked::before {
     #navbar nav .nav-menu{
         display: inline-block;
     }
+
+    #navbar nav .nav-menu ul{
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    #navbar nav .cerrar-sesion .text{
+        display: none;
+    }    
+
     #navbar nav .nav-menu label{
         display: none;
     }
     #navbar nav .material-icons-outlined{
         display: none;
     }
+    #navbar nav .cerrar-sesion{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #navbar nav .cerrar-sesion .material-icons-outlined{
+    display: inline;
+    font-size: 1em;
+    padding: 0;
+}
+
     
 }
