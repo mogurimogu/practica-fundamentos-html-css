@@ -533,7 +533,7 @@ footer#footer {
 
 
 #ver-ahora:checked + div.video{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -642,6 +642,11 @@ footer#footer {
         align-items: center;
         justify-content: center;
     }
+
+    #ver-ahora + div.video .material-icons-outlined{
+        display: none;
+    }
+
     
     #btn-popup{
         display: none;
@@ -658,4 +663,3 @@ footer#footer {
     }
 
 }
-
