@@ -77,6 +77,7 @@ a {
     cursor: pointer;
     opacity: 0.9;
     transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .btn:hover {
@@ -293,7 +294,7 @@ header .carousel #slide-3 {
 }
 
 /*Menú navegación*/
-#navbar{
+#navbar {
     min-height: 60px;
 }
 
@@ -375,20 +376,201 @@ header .carousel #slide-3 {
 }
 
 
-@media (min-width: 920px) {
-    #navbar .logo {
-        background-image: url(../assets/img/logo.svg);
-    }
-
-    #navbar .logo a {
-        display: inline-block;
-        height: 30px;
-        width: 180px;
-    }
-
+.container {
+    max-width: 1920px;
+    margin: 0 auto;
 }
 
+/*Catálogo*/
+main h1.titulo {
+    color: white;
+}
+
+#pelis,
+#series,
+#novedades,
+#favoritos {
+    display: flex;
+    padding: 0 10px;
+    flex-flow: column;
+}
+
+#pelis>.carousel,
+#series>.carousel,
+#novedades>.carousel,
+#favoritos>.carousel {
+    display: flex;
+    flex-flow: row;
+    overflow-y: auto;
+    padding-bottom: 1rem;
+}
+
+.ficha {
+    display: flex;
+    border-radius: 10px;
+    background-color: white;
+    margin-right: 1rem;
+    max-width: 500px;
+}
+
+.ficha>a {
+    display: inherit;
+}
+
+.ficha:hover .informacion {
+    width: 300px;
+    height: auto;
+    padding: 1rem;
+    transition: ease width 0.5s;
+}
+
+.ficha header.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ficha header.encabezado a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color3);
+}
+
+.ficha header.encabezado input.like[type="checkbox"]::before {
+    color: rgb(206, 42, 78);
+}
+
+.ficha .caratula {
+    max-height: 250px;
+    border-radius: 5px;
+}
+
+.ficha .informacion {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+    max-height: 250px;
+    transition: ease width 0.5s;
+}
+
+.ficha .metadatos {
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*footer*/
+
+footer#footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    color: white;
+    text-align: center;
+}
+
+
+.ficha-multimedia{
+    
+}
+
+.ficha-multimedia div.info {
+    padding: 10px;
+    color: white;
+}
+
+.ficha-multimedia div.info .caratula img{
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    max-width: 300px;
+    width: 100%;
+}
+
+.ficha-multimedia div.info .encabezado {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ficha-multimedia div.info .encabezado h1 {
+    margin: 0 0 1em 0;
+}
+
+.ficha-multimedia div.info .metadatos {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+
+#btn-popup{
+    width: 100%;
+    padding: 10px;
+}
+
+#ver-ahora{
+    display: none;
+}
+
+.btn[for="ver-ahora"]{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: var(--color1);
+}
+
+.ficha-multimedia div.video {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    height: 100%;
+}
+.ficha-multimedia div.video video {
+    max-height: 100%;
+    width: 100%;
+}
+
+
+#ver-ahora:checked + div.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#ver-ahora:checked + div.video .material-icons-outlined{
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+
 @media (min-width: 720px) {
+
+    .ficha-multimedia {
+        height: calc(100vh - 111px);
+    }
+
+    .ficha-multimedia div.info {
+        display: flex;
+    }
+    
+    .ficha-multimedia div.info .caratula{
+        width: 30%;
+    }
+    .ficha-multimedia div.info .informacion{
+        width: 70%;
+        padding: 10px;
+    }
+    
+
+    
 
     #navbar nav .nav-menu {
         display: inline-block;
@@ -426,88 +608,54 @@ header .carousel #slide-3 {
 }
 
 
-.container{
-    max-width: 1920px;
-    margin: 0 auto;
+
+@media (min-width: 1280px) {
+
+    .ficha-multimedia {
+        display: flex;
+        flex-wrap: wrap;
+    }    
+
+
+    .ficha-multimedia div.info {
+        max-width: 30%;
+        height: 100%;
+        overflow: auto;
+        display: block;
+        padding: 20px;
+    }
+    
+    .ficha-multimedia div.info .caratula{
+        width: 100%;
+    }
+    .ficha-multimedia div.info .informacion{
+        width: 100%;
+        padding: 0;
+    }
+        
+
+
+    .ficha-multimedia div.video {
+        position: inherit;
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    #btn-popup{
+        display: none;
+    }
+
+    #navbar .logo {
+        background-image: url(../assets/img/logo.svg);
+    }
+
+    #navbar .logo a {
+        display: inline-block;
+        height: 30px;
+        width: 180px;
+    }
+
 }
 
-/*Catálogo*/
-main h1.titulo{
-    color: white;
-}
-#pelis, #series, #novedades, #favoritos{
-    display: flex;
-    padding: 0 10px;
-    flex-flow: column;
-}
-
-#pelis > .carousel, #series > .carousel, #novedades > .carousel, #favoritos > .carousel{
-    display: flex;
-    flex-flow: row;
-    overflow-y: auto;
-    padding-bottom: 1rem;
-}
-
-.ficha{
-    display: flex;
-    border-radius: 10px;
-    background-color: white;
-    margin-right: 1rem;
-    max-width: 500px;
-}
-
-.ficha > a{
-    display: inherit;
-}
-
-.ficha:hover .informacion{
-    width: 300px;
-    height: auto;
-    padding: 1rem;
-    transition: ease width 0.5s;
-}
-
-.ficha header.encabezado{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.ficha header.encabezado a{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: var(--color3);
-}
-
-.ficha header.encabezado input.like[type="checkbox"]::before{
-    color: rgb(206, 42, 78);
-}
-
-.ficha .caratula{
-    max-height: 250px;
-    border-radius: 5px;
-}
-
-.ficha .informacion{
-    overflow: hidden;
-    width: 0;
-    height: 0;
-    max-height: 250px;
-    transition: ease width 0.5s;
-}
-
-.ficha .metadatos{
-    font-weight: 600;
-    display: flex;
-    justify-content: space-between;
-}
-
-/*footer*/
-
-footer#footer{
-    margin-top: 2rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1rem;
-    color: white;
-    text-align: center;
-}

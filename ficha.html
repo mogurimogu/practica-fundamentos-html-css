@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tvision - Películas y series a la carta</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <div class="logo">
+                <a href="./catalogo.html"> </a>
+            </div>
+            <div id="searchbar">
+                <form action="#" method="GET">
+                    <input type="text" name="" id="search">
+                    <label for="search" class="search-btn">
+                        <span class="material-icons-outlined">
+                            search
+                        </span>
+                    </label>
+                </form>
+            </div>
+            <nav>
+                <input type="checkbox" id="nav-menu-bars">
+                <label for="nav-menu-bars">
+                    <span class="material-icons-outlined">
+                        menu
+                    </span>
+                </label>
+                <div class="nav-menu">
+                    <ul>
+                        <li><a href="./catalogo.html#pelis" class="link">
+                                <span class="material-icons-outlined">
+                                    movie
+                                </span>
+                                Pelis
+                            </a></li>
+                        <li><a href="./catalogo.html#series" class="link">
+                                <span class="material-icons-outlined">
+                                    live_tv
+                                </span>
+                                Series
+                            </a></li>
+                        <li><a href="./catalogo.html#novedades" class="link">
+                                <span class="material-icons-outlined">
+                                    calendar_today
+                                </span>
+                                Novedades
+                            </a></li>
+                        <li><a href="./catalogo.html#favoritos" class="link">
+                                <span class="material-icons-outlined">
+                                    favorite
+                                </span>
+                                Favoritos
+                            </a></li>
+                        <li><a href="./" class="cerrar-sesion">
+                                <span class="material-icons-outlined">power_settings_new</span>
+                                <span class="text">Desconectar</span></a></li>
+                    </ul>
+                    <label for="nav-menu-bars">
+                        <span class="material-icons-outlined">
+                            close
+                        </span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="ficha-multimedia">
+        <div class="info">
+            <div class="caratula text-center">
+                <img src="https://www.themoviedb.org/t/p/original/p6QjtBmO6U105l44U0qMDSLxT0L.jpg" alt="" class=" responsive">
+            </div>
+            <div class="informacion">
+                <header class="encabezado">
+                    <h1>El señor de los anillos: La comunidad del anillo</h1>
+                    <input type="checkbox" class="like">
+                </header>
+                <div class="metadatos">
+                    <span class="fecha">2010</span>
+                    <span class="puntuacion">83%</span>
+                </div>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, tempora ea. Dolores cumque voluptate eligendi, aut a ratione beatae? Sequi consequatur enim omnis aspernatur dolores iusto recusandae accusantium modi. Tempora. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus accusamus nisi, voluptatibus error libero tempore debitis. Aut doloribus nobis, eius, aliquam asperiores provident corporis minima culpa ratione, saepe repellat numquam.</p>
+                <label for="ver-ahora" class="btn w100 bgc-5">
+                    <span class="material-icons">
+                        visibility
+                    </span>
+                    Ver ahora
+                </label>
+            </div>
+        </div>
+        <input type="checkbox" name="ver" id="ver-ahora">
+        <div class="video">
+            <label for="ver-ahora">
+                <span class="material-icons-outlined">
+                    close
+                </span>
+            </label>
+            <video controls poster="https://www.themoviedb.org/t/p/original/oiwc338EoBgS4sEI2ixAny4KQKg.jpg" class="responsive">
+                <source src="assets/video/video.mp4" type="video/mp4">
+            </video>
+        </div>
+    </main>
+
+
+
+    <footer id="footer">
+        <div class="container">
+            &copy; 2021 TVision - una práctica HTML y CSS de Luis Javier Cano Benítez
+        </div>
+    </footer>
+</body>
+
+</html>
