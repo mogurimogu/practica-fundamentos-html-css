@@ -640,6 +640,7 @@ footer#footer {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex: 1;
     }
 
     #ver-ahora + div.video .material-icons-outlined{
